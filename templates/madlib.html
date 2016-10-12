@@ -1,0 +1,14 @@
+<html>
+<head>
+    <title>Madlib</title>
+</head>
+<body>
+    <p>There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab. When {{ person }} went to pick it up, it burst into flames in a totally 
+        {% if adjs|length <= 2 %}
+            {{ ' '.join(adjs) }}
+        {% else %}
+            {{ ', '.join(adjs) }}
+        {% endif %}
+    way.</p>
+</body>
+</html>

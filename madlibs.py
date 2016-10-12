@@ -56,6 +56,8 @@ def show_madlib():
     color = request.args.get("color")
     noun = request.args.get("noun")
     adjectives = request.args.getlist("adj")
+    if not adjectives:
+        adjectives = ["boring"]
 
     if len(adjectives) > 1:
         adjectives[-1] = 'and ' + adjectives[-1]
